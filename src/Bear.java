@@ -5,6 +5,8 @@
 public class Bear {
 
     //Print a description for this task
+    System.out.println("Please enter the details for our new Bear.");
+    System.out.println();
 
     /**
     * Bear Constuctor
