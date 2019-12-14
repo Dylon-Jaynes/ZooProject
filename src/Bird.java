@@ -13,8 +13,6 @@ public class Bird {
         birdCount++;
     }
 
-    //Prompt the user for the bird's name, sex, habitat, color, and if it can fly
-
     //Store the data in an animal object
     
     //Add a reference to the animal in an array of animals
