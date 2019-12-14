@@ -6,7 +6,7 @@ public class Mammal {
 
     //Print a description for this task
     System.out.println(
-                "Please select the species of mammal you would like to add to the zoo.");
+        "Please select the species of mammal you would like to add to the zoo.");
     System.out.println();
 
     //Prompt the user for the mammal's species (Giraffe, Lion, or Bear)
