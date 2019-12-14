@@ -6,7 +6,12 @@ public class Bear {
 
     //Print a description for this task
 
-    //Prompt the user for the bear's name, sex, and habitat
+    /**
+    * Bear Constuctor
+    **/
+    public Bear(String name, String sex, String habitat) {
+        bearCount++;
+    }
 
     //Store the data in an animal object
     
