@@ -13,12 +13,12 @@ public class Mammal {
     System.out.print("Enter 0 for Giraffe, 1 for Lion, or 2 for Bear: ");
     
     //Check for valid species number entry
-    if (dayNumber < 0) {
-            System.err.format("%d is invalid. You must enter a number between 0 and 2. %n", dayNumber);
+    if (mammal < 0) {
+            System.err.format("%d is invalid. You must enter a number between 0 and 2. %n", mammal);
             System.exit(0);
         }
-        else if (dayNumber > 2) {
-            System.err.format("%d is invalid. You must enter a number between 0 and 2. %n", dayNumber);
+        else if (mammal > 2) {
+            System.err.format("%d is invalid. You must enter a number between 0 and 2. %n", mammal);
             System.exit(0);
         }
     
