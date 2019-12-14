@@ -5,6 +5,8 @@
 public class Lion {
 
     //Print a description for this task
+    System.out.println("Please enter the details for our new Lion.");
+    System.out.println();
 
     /**
     * Lion Constuctor
