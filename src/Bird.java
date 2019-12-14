@@ -5,7 +5,7 @@
 public class Bird {
 
     //Print a description for this task
-    System.out.println("Please enter the details for our new Bird.");
+    System.out.println("Please enter the details for a new bird.");
     System.out.println();
     
     /**
