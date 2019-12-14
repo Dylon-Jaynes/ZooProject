@@ -2,14 +2,10 @@
  * Program to enter the information for a new lion
  */
 
-public class Lion {
-
-    //Print a description for this task
-    System.out.println("Please enter the details for a new lion.");
-    System.out.println();
+public class Lion extends Animal {
 
     /**
-    * Lion Constuctor
+    * Lion Constructor
     **/
     public Lion(String name, String sex, String habitat) {
         lionCount++;

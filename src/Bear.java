@@ -2,14 +2,10 @@
  * Program to enter the information for a new bear
  */
 
-public class Bear {
-
-    //Print a description for this task
-    System.out.println("Please enter the details for a new bear.");
-    System.out.println();
+public class Bear extends Animal {
 
     /**
-    * Bear Constuctor
+    * Bear Constructor
     **/
     public Bear(String name, String sex, String habitat) {
         bearCount++;

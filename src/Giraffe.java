@@ -2,14 +2,10 @@
  * Program to enter the information for a new giraffe
  */
 
-public class Giraffe {
-
-    //Print a description for this task
-    System.out.println("Please enter the details for a new giraffe.");
-    System.out.println();
+public class Giraffe extends Animal {
 
     /**
-    * Giraffe Constuctor
+    * Giraffe Constructor
     **/
     public Giraffe(String name, String sex, String habitat) {
         giraffeCount++;

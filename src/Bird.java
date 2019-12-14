@@ -2,16 +2,12 @@
  * Program to enter the information for a new bird
  */
 
-public class Bird {
+public class Bird extends Animal {
 
-    //Print a description for this task
-    System.out.println("Please enter the details for a new bird.");
-    System.out.println();
-    
     /**
-    * Bird Constuctor
+    * Bird Constructor
     **/
-    public Bird(String name, String sex, String habitat, String color, String fly) {
+    public Bird(String name, String sex, String habitat, String color, boolean flight) {
         birdCount++;
         totalAnimals++;
     }
