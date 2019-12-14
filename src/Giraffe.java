@@ -13,6 +13,7 @@ public class Giraffe {
     **/
     public Giraffe(String name, String sex, String habitat) {
         giraffeCount++;
+        totalAnimals++;
     }
 
     //Store the data in an animal object
