@@ -5,7 +5,7 @@
 public class Bear {
 
     //Print a description for this task
-    System.out.println("Please enter the details for our new Bear.");
+    System.out.println("Please enter the details for a new bear.");
     System.out.println();
 
     /**
@@ -13,6 +13,7 @@ public class Bear {
     **/
     public Bear(String name, String sex, String habitat) {
         bearCount++;
+        totalAnimals++;
     }
 
     //Store the data in an animal object
