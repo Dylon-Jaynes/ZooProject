@@ -6,7 +6,7 @@ public class Bird {
 
     //Print a description for this task
 
-    //Prompt the user for the bird's name, sex, habitat, and if it can fly
+    //Prompt the user for the bird's name, sex, habitat, color, and if it can fly
 
     //Store the data in an animal object
     
