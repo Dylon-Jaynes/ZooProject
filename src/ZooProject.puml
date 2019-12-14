@@ -1,0 +1,39 @@
+@startuml
+
+object ZooGreeting {
+    + main(String[] argv) {static}
+}
+
+class Animal extends ZooGreeting {
+    - public int: birdCount
+    - public int: mammalCount
+    - public int: giraffeCount
+    - public int: lionCount
+    - public int: bearCount
+    + Animal(String: name, String: sex, String: habitat)
+    # getName(): String
+    # getSex(): String
+    # getHabitat(): String
+}
+
+class Bird extends Animal {
+    + Bird(String: color, boolean: flight, String: name,
+      String: sex, String: habitat)
+}
+
+class Mammal extends Animal {
+    + Mammal(String: name, String: sex, String: habitat)
+}
+
+class Giraffe extends Mammal {
+    + Giraffe(String: name, String: sex, String: habitat)
+}
+
+class Lion extends Mammal {
+    + Lion(String: name, String: sex, String: habitat)
+}
+
+class Bear extends Mammal {
+    + Bear(String: name, String: sex, String: habitat)
+}
+@enduml
