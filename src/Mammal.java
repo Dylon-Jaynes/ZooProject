@@ -12,6 +12,9 @@ public class Mammal {
     //Prompt the user for the mammal's species (Giraffe, Lion, or Bear)
     System.out.print("Enter 0 for Giraffe, 1 for Lion, or 2 for Bear: ");
     
+    //Read species number into variable
+        var mammal = input.nextInt();
+    
     //Check for valid species number entry
     if (mammal < 0) {
             System.err.format("%d is invalid. You must enter a number between 0 and 2. %n", mammal);
