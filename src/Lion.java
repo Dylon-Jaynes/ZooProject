@@ -6,7 +6,12 @@ public class Lion {
 
     //Print a description for this task
 
-    
+    /**
+    * Lion Constuctor
+    **/
+    public Lion(String name, String sex, String habitat) {
+        lionCount++;
+    }
 
     //Store the data in an animal object
     
