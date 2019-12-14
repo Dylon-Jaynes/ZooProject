@@ -13,6 +13,7 @@ public class Bird {
     **/
     public Bird(String name, String sex, String habitat, String color, String fly) {
         birdCount++;
+        totalAnimals++;
     }
 
     //Store the data in an animal object
