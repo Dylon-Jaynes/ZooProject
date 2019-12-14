@@ -5,7 +5,7 @@
 public class Giraffe {
 
     //Print a description for this task
-    System.out.println("Please enter the details for our new Giraffe.");
+    System.out.println("Please enter the details for a new giraffe.");
     System.out.println();
 
     /**
