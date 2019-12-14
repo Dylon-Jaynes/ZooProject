@@ -5,8 +5,16 @@
 public class Bird {
 
     //Print a description for this task
-
-    //Prompt the user for the bird's name, sex, habitat, and if it can fly
+    System.out.println("Please enter the details for a new bird.");
+    System.out.println();
+    
+    /**
+    * Bird Constuctor
+    **/
+    public Bird(String name, String sex, String habitat, String color, String fly) {
+        birdCount++;
+        totalAnimals++;
+    }
 
     //Store the data in an animal object
     

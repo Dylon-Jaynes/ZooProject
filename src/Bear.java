@@ -5,8 +5,17 @@
 public class Bear {
 
     //Print a description for this task
+    System.out.println("Please enter the details for a new bear.");
+    System.out.println();
 
-    //Prompt the user for the bear's name, sex, and habitat
+    /**
+    * Bear Constuctor
+    **/
+    public Bear(String name, String sex, String habitat) {
+        bearCount++;
+        mammalCount++;
+        totalAnimals++;
+    }
 
     //Store the data in an animal object
     
