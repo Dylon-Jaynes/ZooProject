@@ -13,6 +13,7 @@ public class Lion {
     **/
     public Lion(String name, String sex, String habitat) {
         lionCount++;
+        mammalCount++;
         totalAnimals++;
     }
 
