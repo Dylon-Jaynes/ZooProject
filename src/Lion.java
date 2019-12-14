@@ -6,7 +6,7 @@ public class Lion {
 
     //Print a description for this task
 
-    //Prompt the user for the lion's name, sex, and habitat
+    
 
     //Store the data in an animal object
     
