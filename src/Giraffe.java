@@ -6,7 +6,12 @@ public class Giraffe {
 
     //Print a description for this task
 
-    //Prompt the user for the giraffe's name, sex, and habitat
+    /**
+    * Giraffe Constuctor
+    **/
+    public Giraffe(String name, String sex, String habitat) {
+        giraffeCount++;
+    }
 
     //Store the data in an animal object
     
