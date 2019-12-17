@@ -23,7 +23,7 @@ public class Storage {
                 if (obj instanceof Bird) {
                     Bird b1 = (Bird) obj;
                     out.format("%s|%s|%s|%s|%s|%b\n", "Bird", obj.getName(), obj.getSex(), obj.getHabitat(),
-                            obj.getColor(), obj.flight());
+                            ((Bird) obj).getColor(), ((Bird) obj).flight());
                 }
 
                 else if (obj instanceof Giraffe) {
