@@ -10,6 +10,7 @@ public class SubMenu extends Menu {
     // Make this static so it stays with the class. This way
     // we can count how many times this SubMenu class gets
     // instantiated.
+    Scanner input = new Scanner(System.in);
     private static int callCount = 0;
     private final static String[] countDescriptions = new String[] {
             "", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth",
@@ -106,7 +107,8 @@ public class SubMenu extends Menu {
             System.err.println("You must enter a valid color");
             System.exit(1);
         }
-        if (flight == null || flight.trim().length() == 0 || flight.trim().length() > 1) {
+        //ERROR: It could be false but it won't except null
+        if (flight == false) {
             System.err.println("You must select a valid option, true or false");
             System.exit(1);
         }

@@ -1,18 +1,16 @@
 /**
- * Program to enter the information for a new giraffe
+ * Class for constructing Giraffes
  */
 
 public class Giraffe extends Animal {
 
     /**
-    * Giraffe Constructor
-    **/
+     * Giraffe Constructor
+     **/
     public Giraffe(String name, String sex, String habitat) {
+        super(name, sex, habitat);
         giraffeCount++;
         mammalCount++;
         totalAnimals++;
     }
-
-
-
 }

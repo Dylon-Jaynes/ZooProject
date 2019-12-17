@@ -1,18 +1,16 @@
 /**
- * Program to enter the information for a new bear
+ * Class for constructing Bears
  */
 
 public class Bear extends Animal {
 
     /**
-    * Bear Constructor
-    **/
+     * Bear Constructor
+     **/
     public Bear(String name, String sex, String habitat) {
+        super(name, sex, habitat);
         bearCount++;
         mammalCount++;
         totalAnimals++;
     }
-
-
-
 }
