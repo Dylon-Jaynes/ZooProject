@@ -32,7 +32,9 @@ public class Animal {
      * @param habitat
      */
     public Animal(String name, String sex, String habitat) {
-
+        animalName = name;
+        animalSex = sex;
+        animalHabitat = habitat;
     }
 
     /**
@@ -40,11 +42,11 @@ public class Animal {
      * @return
      */
     public String getName() {
-        return name;
+        return animalName;
     }
 
     public void setName(String value) {
-        name = value;
+        animalName = value;
     }
 
     /**
@@ -52,11 +54,11 @@ public class Animal {
      * @return
      */
     public String getSex() {
-        return sex;
+        return animalSex;
     }
 
     public void setSex(String value) {
-        sex = value;
+        animalSex = value;
     }
 
     /**
@@ -64,10 +66,10 @@ public class Animal {
      * @return
      */
     public String getHabitat() {
-        return habitat;
+        return animalHabitat;
     }
 
     public void setHabitat(String value) {
-        habitat = value;
+        animalHabitat = value;
     }
 }
