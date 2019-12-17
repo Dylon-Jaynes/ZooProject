@@ -74,7 +74,7 @@ public class SubMenu extends Menu {
     }
 
     /**
-     * Do the sub-menu 1 action.
+     * Add a bird to the database
      */
     private void subMenuOption1() {
         System.out.println("Fill out the following fields to add a bird:");
@@ -113,7 +113,7 @@ public class SubMenu extends Menu {
     }
 
     /**
-     * Do the sub-menu 2 action.
+     * Add a bear to the database
      */
     private void subMenuOption2() {
         System.out.println("Fill out the following fields to add a bear:");
@@ -140,7 +140,7 @@ public class SubMenu extends Menu {
     }
 
     /**
-     * Do the sub-menu 3 action.
+     * Add a giraffe to the database
      */
     private void subMenuOption3() {
         System.out.println("Fill out the following fields to add a giraffe:");
@@ -167,7 +167,7 @@ public class SubMenu extends Menu {
     }
 
     /**
-     * Do the sub-menu 4 action.
+     * Add a lion to the database
      */
     private void subMenuOption4() {
         System.out.println("Fill out the following fields to add a lion:");
