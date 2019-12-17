@@ -16,8 +16,10 @@ public class SubMenu extends Menu {
     };
 
     private static MenuItem[] menuItems = new MenuItem[] {
-            new MenuItem('1', "Submenu Option 1"),
-            new MenuItem('2', "Submenu Option 2"),
+            new MenuItem('1', "Add a Bird"),
+            new MenuItem('2', "Add a Bear"),
+            new MenuItem('3', "Add a Giraffe"),
+            new MenuItem('4', "Add a Lion"),
             new MenuItem('R', "Return to previous menu")
     };
 
@@ -31,13 +33,13 @@ public class SubMenu extends Menu {
 
     @Override
     protected String getTitle() {
-        return "Sub Menu";
+        return "Add an Animal";
     }
 
     @Override
     protected String getDescription() {
         // build our description dynamically.
-        return String.format("This is the %s time you've called this menu.",
+        return String.format("This is the %s time you've added an animal.",
                 callCount < countDescriptions.length ? countDescriptions[callCount] : callCount + "th");
     }
 
@@ -55,6 +57,12 @@ public class SubMenu extends Menu {
             case '2':
                 subMenuOption2();
                 break;
+            case '3':
+                subMenuOption3();
+                break;
+            case '4':
+                subMenuOption4();
+                break;
             case 'R':
                 return false;
             default:
@@ -68,13 +76,27 @@ public class SubMenu extends Menu {
      * Do the sub-menu 1 action.
      */
     private void subMenuOption1() {
-        System.out.println("You have called sub menu option 1");
+        System.out.println("Fill out the following fields to add a bird:");
     }
 
     /**
      * Do the sub-menu 2 action.
      */
     private void subMenuOption2() {
-        System.out.println("You have called sub menu option 2");
+        System.out.println("Fill out the following fields to add a bear:");
+    }
+
+    /**
+     * Do the sub-menu 3 action.
+     */
+    private void subMenuOption3() {
+        System.out.println("Fill out the following fields to add a giraffe:");
+    }
+
+    /**
+     * Do the sub-menu 4 action.
+     */
+    private void subMenuOption4() {
+        System.out.println("Fill out the following fields to add a lion:");
     }
 }
