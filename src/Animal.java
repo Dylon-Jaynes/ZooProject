@@ -9,17 +9,18 @@ public class Animal {
     public int lionCount = 0;
     public int bearCount = 0;
     public int totalAnimals = 0;
-    private String name;
-    private String sex;
-    private String habitat;
+    private String animalName;
+    private String animalSex;
+    private String animalHabitat;
 
     /**
      * Default animal constructor
      */
     public Animal() {
-        name = null;
-        sex = null;
-        habitat = null;
+
+        animalName = null;
+        animalSex = null;
+        animalHabitat = null;
         animalCount++;
         totalAnimals++;
     }
