@@ -12,8 +12,4 @@ public class Bird extends Animal {
         totalAnimals++;
     }
 
-    //Store the data in an animal object
-    
-    //Add a reference to the animal in an array of animals
-
 }
