@@ -1,5 +1,6 @@
 import menu.Menu;
 import menu.MenuItem;
+import java.util.Scanner;
 
 /**
  * Our application's main menu.
@@ -77,6 +78,17 @@ public class SubMenu extends Menu {
      */
     private void subMenuOption1() {
         System.out.println("Fill out the following fields to add a bird:");
+        System.out.println();
+        System.out.print("Name: ");
+        String name = input.nextLine();
+        System.out.print("Sex: ");
+        String sex = input.nextLine();
+        System.out.print("Habitat: ");
+        String habitat = input.nextLine();
+        System.out.print("Color: ");
+        String color = input.nextLine();
+        System.out.print("Can this bird fly? Y/N: ");
+        boolean flight = input.nextBoolean();
     }
 
     /**
@@ -84,6 +96,13 @@ public class SubMenu extends Menu {
      */
     private void subMenuOption2() {
         System.out.println("Fill out the following fields to add a bear:");
+        System.out.println();
+        System.out.print("Name: ");
+        String name = input.nextLine();
+        System.out.print("Sex: ");
+        String sex = input.nextLine();
+        System.out.print("Habitat: ");
+        String habitat = input.nextLine();
     }
 
     /**
@@ -91,6 +110,13 @@ public class SubMenu extends Menu {
      */
     private void subMenuOption3() {
         System.out.println("Fill out the following fields to add a giraffe:");
+        System.out.println();
+        System.out.print("Name: ");
+        String name = input.nextLine();
+        System.out.print("Sex: ");
+        String sex = input.nextLine();
+        System.out.print("Habitat: ");
+        String habitat = input.nextLine();
     }
 
     /**
@@ -98,5 +124,12 @@ public class SubMenu extends Menu {
      */
     private void subMenuOption4() {
         System.out.println("Fill out the following fields to add a lion:");
+        System.out.println();
+        System.out.print("Name: ");
+        String name = input.nextLine();
+        System.out.print("Sex: ");
+        String sex = input.nextLine();
+        System.out.print("Habitat: ");
+        String habitat = input.nextLine();
     }
 }
