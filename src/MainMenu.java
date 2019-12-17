@@ -9,9 +9,9 @@ public class MainMenu extends Menu {
     private String userInputValue = null;
 
     private static MenuItem[] menuItems = new MenuItem[] {
-            new MenuItem('1', "Call a sub-menu"),
-            new MenuItem('2', "Prompt for something"),
-            new MenuItem('3', "Display something"),
+            new MenuItem('1', "Add an animal to the zoo"),
+            new MenuItem('2', "Remove and animal from the zoo"),
+            new MenuItem('3', "Display a list of animals in the zoo"),
             new MenuItem('X', "Exit Application")
     };
 
@@ -70,8 +70,8 @@ public class MainMenu extends Menu {
      * into the Menu class.
      */
     private void promptForSomething() {
-        userInputValue = prompt("Please enter something: ", true);
-        System.out.println("Thank you. You can see your input by choosing the Display Something menu");
+        userInputValue = prompt("Please enter the name of the animal you wish to remove: ", true);
+        System.out.println("Thank you");
     }
 
     /**
@@ -79,9 +79,9 @@ public class MainMenu extends Menu {
      */
     private void displaySomething() {
         if (userInputValue == null) {
-            System.out.println("You have not yet entered anything.");
+            System.out.println("No data on file.");
         } else {
-            System.out.println("Here's what you entered: ");
+            System.out.println("Zoo Database: ");
             System.out.println(userInputValue);
         }
     }

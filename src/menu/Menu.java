@@ -111,7 +111,7 @@ public abstract class Menu {
             System.out.println();
 
             // prompt the user and get the menu choice
-            String userInput = prompt("Your choice: ");
+            String userInput = prompt("Select an option: ");
 
             System.out.println();
 
