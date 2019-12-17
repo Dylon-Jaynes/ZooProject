@@ -87,8 +87,29 @@ public class SubMenu extends Menu {
         String habitat = input.nextLine();
         System.out.print("Color: ");
         String color = input.nextLine();
-        System.out.print("Can this bird fly? Y/N: ");
+        System.out.print("Can this bird fly? true/false: ");
         boolean flight = input.nextBoolean();
+
+        if (name == null || name.trim().length() == 0 || name.trim().length() > 1) {
+            System.err.println("You must enter a valid name");
+            System.exit(1);
+        }
+        if (sex == null || sex.trim().length() == 0 || sex.trim().length() > 1) {
+            System.err.println("You must enter a valid sex");
+            System.exit(1);
+        }
+        if (habitat == null || habitat.trim().length() == 0 || habitat.trim().length() > 1) {
+            System.err.println("You must enter a valid habitat");
+            System.exit(1);
+        }
+        if (color == null || color.trim().length() == 0 || color.trim().length() > 1) {
+            System.err.println("You must enter a valid color");
+            System.exit(1);
+        }
+        if (flight == null || flight.trim().length() == 0 || flight.trim().length() > 1) {
+            System.err.println("You must select a valid option, true or false");
+            System.exit(1);
+        }
     }
 
     /**
@@ -103,6 +124,19 @@ public class SubMenu extends Menu {
         String sex = input.nextLine();
         System.out.print("Habitat: ");
         String habitat = input.nextLine();
+
+        if (name == null || name.trim().length() == 0 || name.trim().length() > 1) {
+            System.err.println("You must enter a valid name");
+            System.exit(1);
+        }
+        if (sex == null || sex.trim().length() == 0 || sex.trim().length() > 1) {
+            System.err.println("You must enter a valid sex");
+            System.exit(1);
+        }
+        if (habitat == null || habitat.trim().length() == 0 || habitat.trim().length() > 1) {
+            System.err.println("You must enter a valid habitat");
+            System.exit(1);
+        }
     }
 
     /**
@@ -117,6 +151,19 @@ public class SubMenu extends Menu {
         String sex = input.nextLine();
         System.out.print("Habitat: ");
         String habitat = input.nextLine();
+
+        if (name == null || name.trim().length() == 0 || name.trim().length() > 1) {
+            System.err.println("You must enter a valid name");
+            System.exit(1);
+        }
+        if (sex == null || sex.trim().length() == 0 || sex.trim().length() > 1) {
+            System.err.println("You must enter a valid sex");
+            System.exit(1);
+        }
+        if (habitat == null || habitat.trim().length() == 0 || habitat.trim().length() > 1) {
+            System.err.println("You must enter a valid habitat");
+            System.exit(1);
+        }
     }
 
     /**
@@ -131,5 +178,18 @@ public class SubMenu extends Menu {
         String sex = input.nextLine();
         System.out.print("Habitat: ");
         String habitat = input.nextLine();
+
+        if (name == null || name.trim().length() == 0 || name.trim().length() > 1) {
+            System.err.println("You must enter a valid name");
+            System.exit(1);
+        }
+        if (sex == null || sex.trim().length() == 0 || sex.trim().length() > 1) {
+            System.err.println("You must enter a valid sex");
+            System.exit(1);
+        }
+        if (habitat == null || habitat.trim().length() == 0 || habitat.trim().length() > 1) {
+            System.err.println("You must enter a valid habitat");
+            System.exit(1);
+        }
     }
 }
