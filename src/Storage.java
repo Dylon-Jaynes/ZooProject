@@ -78,24 +78,45 @@ public class Storage {
                 }
 
                 else if (fields[0].equals("Bird")) {
-                    Bird b1 = new Bird();
                     if (fields.length < 6) {
                         throw new IOException("Invalid record format");
                     }
-                    
+                    Bird b1 = new Bird();
+                    b1.setName(fields[1]);
+                    b1.setSex(fields[2]);
+                    b1.setHabitat(fields[3]);
+                    b1.setColor(fields[4]);
+                    b1.setFlight(fields[5]);
                 }
 
                 else if (fields[0].equals("Giraffe")) {
-
+                    if (fields.length < 4) {
+                        throw new IOException("Invalid record format");
+                    }
+                    Giraffe g = new Giraffe();
+                    g.setName(fields[1]);
+                    g.setSex(fields[2]);
+                    g.setHabitat(fields[3]);
                 }
 
                 else if (fields[0].equals("Lion")) {
-
+                    if (fields.length < 4) {
+                        throw new IOException("Invalid record format");
+                    }
+                    Lion l = new Lion();
+                    l.setName(fields[1]);
+                    l.setSex(fields[2]);
+                    l.setHabitat(fields[3]);
                 }
 
                 else if (fields[0].equals("Bear")) {
-
-                }
+                    if (fields.length < 4) {
+                        throw new IOException("Invalid record format");
+                    }
+                    Bear b = new Bear();
+                    b.setName(fields[1]);
+                    b.setSex(fields[2]);
+                    b.setHabitat(fields[3]);                }
 
                 else {
                     throw new IOException("Invalid record type: " + fields[0]);
