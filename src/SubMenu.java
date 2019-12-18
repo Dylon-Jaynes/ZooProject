@@ -1,6 +1,9 @@
 import menu.Menu;
 import menu.MenuItem;
+
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * Our application's main menu.
@@ -11,11 +14,12 @@ public class SubMenu extends Menu {
     // we can count how many times this SubMenu class gets
     // instantiated.
     Scanner input = new Scanner(System.in);
+    public ArrayList<Animal> zooAnimals = new ArrayList<>();
     private static int callCount = 0;
     private final static String[] countDescriptions = new String[] {
             "", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth",
             "ninth", "tenth"
-    };
+};
 
     private static MenuItem[] menuItems = new MenuItem[] {
             new MenuItem('1', "Add a Bird"),
@@ -51,7 +55,7 @@ public class SubMenu extends Menu {
     }
 
     @Override
-    protected boolean handleMenuSelection(char key) {
+    protected boolean handleMenuSelection(char key) throws IOException {
         switch(Character.toUpperCase(key)) {
             case '1':
                 subMenuOption1();
@@ -66,6 +70,7 @@ public class SubMenu extends Menu {
                 subMenuOption4();
                 break;
             case 'R':
+                new Storage().storeData("zooDatabase", zooAnimals);
                 return false;
             default:
                 System.out.println("Please enter a valid selection");
@@ -89,29 +94,30 @@ public class SubMenu extends Menu {
         System.out.print("Color: ");
         String color = input.nextLine();
         System.out.print("Can this bird fly? true/false: ");
-        boolean flight = input.nextBoolean();
+        String flight = input.nextLine();
 
-        if (name == null || name.trim().length() == 0 || name.trim().length() > 1) {
+        if (name == null || name.trim().length() == 0) {
             System.err.println("You must enter a valid name");
             System.exit(1);
         }
-        if (sex == null || sex.trim().length() == 0 || sex.trim().length() > 1) {
+        if (sex == null || sex.trim().length() == 0) {
             System.err.println("You must enter a valid sex");
             System.exit(1);
         }
-        if (habitat == null || habitat.trim().length() == 0 || habitat.trim().length() > 1) {
+        if (habitat == null || habitat.trim().length() == 0) {
             System.err.println("You must enter a valid habitat");
             System.exit(1);
         }
-        if (color == null || color.trim().length() == 0 || color.trim().length() > 1) {
+        if (color == null || color.trim().length() == 0) {
             System.err.println("You must enter a valid color");
             System.exit(1);
         }
         //ERROR: It could be false but it won't except null
-        if (flight == false) {
+        if (flight == null || flight.trim().length() == 0) {
             System.err.println("You must select a valid option, true or false");
             System.exit(1);
         }
+        zooAnimals.add(new Bird(name, sex, habitat, color, flight));
     }
 
     /**
@@ -127,18 +133,19 @@ public class SubMenu extends Menu {
         System.out.print("Habitat: ");
         String habitat = input.nextLine();
 
-        if (name == null || name.trim().length() == 0 || name.trim().length() > 1) {
+        if (name == null || name.trim().length() == 0) {
             System.err.println("You must enter a valid name");
             System.exit(1);
         }
-        if (sex == null || sex.trim().length() == 0 || sex.trim().length() > 1) {
+        if (sex == null || sex.trim().length() == 0) {
             System.err.println("You must enter a valid sex");
             System.exit(1);
         }
-        if (habitat == null || habitat.trim().length() == 0 || habitat.trim().length() > 1) {
+        if (habitat == null || habitat.trim().length() == 0) {
             System.err.println("You must enter a valid habitat");
             System.exit(1);
         }
+        zooAnimals.add(new Bear(name, sex, habitat));
     }
 
     /**
@@ -154,18 +161,19 @@ public class SubMenu extends Menu {
         System.out.print("Habitat: ");
         String habitat = input.nextLine();
 
-        if (name == null || name.trim().length() == 0 || name.trim().length() > 1) {
+        if (name == null || name.trim().length() == 0) {
             System.err.println("You must enter a valid name");
             System.exit(1);
         }
-        if (sex == null || sex.trim().length() == 0 || sex.trim().length() > 1) {
+        if (sex == null || sex.trim().length() == 0) {
             System.err.println("You must enter a valid sex");
             System.exit(1);
         }
-        if (habitat == null || habitat.trim().length() == 0 || habitat.trim().length() > 1) {
+        if (habitat == null || habitat.trim().length() == 0) {
             System.err.println("You must enter a valid habitat");
             System.exit(1);
         }
+        zooAnimals.add(new Giraffe(name, sex, habitat));
     }
 
     /**
@@ -181,17 +189,18 @@ public class SubMenu extends Menu {
         System.out.print("Habitat: ");
         String habitat = input.nextLine();
 
-        if (name == null || name.trim().length() == 0 || name.trim().length() > 1) {
+        if (name == null || name.trim().length() == 0) {
             System.err.println("You must enter a valid name");
             System.exit(1);
         }
-        if (sex == null || sex.trim().length() == 0 || sex.trim().length() > 1) {
+        if (sex == null || sex.trim().length() == 0) {
             System.err.println("You must enter a valid sex");
             System.exit(1);
         }
-        if (habitat == null || habitat.trim().length() == 0 || habitat.trim().length() > 1) {
+        if (habitat == null || habitat.trim().length() == 0) {
             System.err.println("You must enter a valid habitat");
             System.exit(1);
         }
+        zooAnimals.add(new Lion(name, sex, habitat));
     }
 }

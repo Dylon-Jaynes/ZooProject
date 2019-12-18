@@ -21,19 +21,15 @@ class Bird extends Animal {
       String: sex, String: habitat)
 }
 
-class Mammal extends Animal {
-    + Mammal(String: name, String: sex, String: habitat)
-}
-
-class Giraffe extends Mammal {
+class Giraffe extends Animal {
     + Giraffe(String: name, String: sex, String: habitat)
 }
 
-class Lion extends Mammal {
+class Lion extends Animal {
     + Lion(String: name, String: sex, String: habitat)
 }
 
-class Bear extends Mammal {
+class Bear extends Animal {
     + Bear(String: name, String: sex, String: habitat)
 }
 @enduml

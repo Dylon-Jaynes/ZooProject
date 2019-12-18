@@ -1,6 +1,9 @@
 import menu.Menu;
 import menu.MenuItem;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 /**
  * Our application's main menu.
  */
@@ -39,19 +42,17 @@ public class MainMenu extends Menu {
     }
 
     @Override
-    protected boolean handleMenuSelection(char key) {
+    protected boolean handleMenuSelection(char key) throws IOException {
         switch(Character.toUpperCase(key)) {
             case '1':
                 callSubMenu();
                 break;
             case '2':
-                removeAnimal();
-                break;
-            case '3':
                 displayAnimals();
                 break;
+            case '3':
+                break;
             case '4':
-                countAnimals();
                 break;
             case 'X':
                 return false;
@@ -65,7 +66,7 @@ public class MainMenu extends Menu {
     /**
      * Transfer program control to the sub-menu.
      */
-    private void callSubMenu() {
+    private void callSubMenu() throws IOException {
         new SubMenu().display();
     }
 
@@ -81,13 +82,7 @@ public class MainMenu extends Menu {
     /**
      * Display the animals in the zoo database.
      */
-    private void displayAnimals() {
-        if (userInputValue == null) {
-            System.out.println("No data on file.");
-        } else {
-            System.out.println("Zoo Database: ");
-            System.out.println(userInputValue);
-        }
+    private void displayAnimals() throws IOException {
+        new Storage().loadData("zooDatabase");
     }
-
 }

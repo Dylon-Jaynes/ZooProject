@@ -4,7 +4,7 @@
 
 public class Bird extends Animal {
     private String color;
-    private boolean flight;
+    private String flight;
 
     /**
      * Default Bird Constructor
@@ -12,14 +12,14 @@ public class Bird extends Animal {
 
     public Bird() {
         color = null;
-        flight = false;
+        flight = null;
 
     }
 
     /**
      * Bird Constructor
      **/
-    public Bird(String name, String sex, String habitat, String colorValue, boolean flightValue) {
+    public Bird(String name, String sex, String habitat, String colorValue, String flightValue) {
         super(name, sex, habitat);
         color = colorValue;
         flight = flightValue;
@@ -44,14 +44,14 @@ public class Bird extends Animal {
     /**
      * Getter for Bird Flight
      */
-    public boolean flight() {
+    public String flight() {
         return flight;
     }
 
     /**
      * Setter for Bird Flight
      */
-    public void setFlight(boolean flight) {
+    public void setFlight(String flight) {
         this.flight = flight;
     }
 }
