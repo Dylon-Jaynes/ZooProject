@@ -13,9 +13,9 @@ public class MainMenu extends Menu {
 
     private static MenuItem[] menuItems = new MenuItem[] {
             new MenuItem('1', "Add an animal to the zoo"),
-            new MenuItem('2', "Remove and animal from the zoo"),
-            new MenuItem('3', "Display a list of animals in the zoo"),
-            new MenuItem('4', "Get a count of animals by species"),
+            new MenuItem('2', "Display a list of animals in the zoo"),
+            new MenuItem('3', "Get a count of animals by species"),
+            new MenuItem('4', "Remove and animal from the zoo"),
             new MenuItem('X', "Exit Application")
     };
 
@@ -71,7 +71,7 @@ public class MainMenu extends Menu {
     }
 
     /**
-     * Use the prompt() methods built into the Menu class.
+     * Remove and animal from the zoo database
      */
     private void removeAnimal() {
         userInputValue = prompt("Please enter the name of the animal you wish to remove: ", true);
