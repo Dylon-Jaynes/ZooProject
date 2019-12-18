@@ -63,15 +63,14 @@ public class MainMenu extends Menu {
     }
 
     /**
-     * Transfer program control to the sub-menu.
+     * Transfer program control to the Add Animal sub-menu.
      */
     private void callSubMenu() {
         new SubMenu().display();
     }
 
     /**
-     * Demonstrate how to use the prompt() methods built
-     * into the Menu class.
+     * Use the prompt() methods built into the Menu class.
      */
     private void removeAnimal() {
         userInputValue = prompt("Please enter the name of the animal you wish to remove: ", true);
