@@ -12,6 +12,7 @@ public class MainMenu extends Menu {
             new MenuItem('1', "Add an animal to the zoo"),
             new MenuItem('2', "Remove and animal from the zoo"),
             new MenuItem('3', "Display a list of animals in the zoo"),
+            new MenuItem('4', "Get a count of animals by species"),
             new MenuItem('X', "Exit Application")
     };
 
@@ -44,10 +45,13 @@ public class MainMenu extends Menu {
                 callSubMenu();
                 break;
             case '2':
-                promptForSomething();
+                removeAnimal();
                 break;
             case '3':
-                displaySomething();
+                displayAnimals();
+                break;
+            case '4':
+                countAnimals();
                 break;
             case 'X':
                 return false;
@@ -69,15 +73,15 @@ public class MainMenu extends Menu {
      * Demonstrate how to use the prompt() methods built
      * into the Menu class.
      */
-    private void promptForSomething() {
+    private void removeAnimal() {
         userInputValue = prompt("Please enter the name of the animal you wish to remove: ", true);
         System.out.println("Thank you");
     }
 
     /**
-     * Display the user's input value from the promptForSomething menu.
+     * Display the animals in the zoo database.
      */
-    private void displaySomething() {
+    private void displayAnimals() {
         if (userInputValue == null) {
             System.out.println("No data on file.");
         } else {
