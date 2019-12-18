@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -63,23 +64,26 @@ public class Storage {
         ArrayList<Animal> newData = new ArrayList<>();
 
         //Check if file exists
-
-        try (Scanner input = new Scanner(fileName)) {
+        int lineNumber = 0;
+        try (Scanner input = new Scanner(new File(fileName))) {
             while(input.hasNextLine()) {
                 String line = input.nextLine().trim();
-                String[] fields = line.split("|");
+                lineNumber += 1;
+
+                String[] fields = line.split("\\|");
                 if (fields[0].equals("Animal")) {
-                    Animal a = new Animal;
+                    Animal a = new Animal();
                     if (fields.length > 1) {
                         a.setName(fields[1]);
                         a.setSex(fields[2]);
                         a.setHabitat(fields[3]);
                     }
+                    newData.add(a);
                 }
 
                 else if (fields[0].equals("Bird")) {
                     if (fields.length < 6) {
-                        throw new IOException("Invalid record format");
+                        throw new IOException("Invalid record format on line " + lineNumber);
                     }
                     Bird b1 = new Bird();
                     b1.setName(fields[1]);
@@ -87,43 +91,51 @@ public class Storage {
                     b1.setHabitat(fields[3]);
                     b1.setColor(fields[4]);
                     b1.setFlight(fields[5]);
+                    newData.add(b1);
                 }
 
                 else if (fields[0].equals("Giraffe")) {
                     if (fields.length < 4) {
-                        throw new IOException("Invalid record format");
+                        throw new IOException("Invalid record format on line " + lineNumber);
                     }
                     Giraffe g = new Giraffe();
                     g.setName(fields[1]);
                     g.setSex(fields[2]);
                     g.setHabitat(fields[3]);
+                    newData.add(g);
                 }
 
                 else if (fields[0].equals("Lion")) {
                     if (fields.length < 4) {
-                        throw new IOException("Invalid record format");
+                        throw new IOException("Invalid record format on line " + lineNumber);
                     }
                     Lion l = new Lion();
                     l.setName(fields[1]);
                     l.setSex(fields[2]);
                     l.setHabitat(fields[3]);
+                    newData.add(l);
                 }
 
                 else if (fields[0].equals("Bear")) {
                     if (fields.length < 4) {
-                        throw new IOException("Invalid record format");
+                        throw new IOException("Invalid record format on line " + lineNumber);
                     }
                     Bear b = new Bear();
                     b.setName(fields[1]);
                     b.setSex(fields[2]);
-                    b.setHabitat(fields[3]);                }
-
-                else {
-                    throw new IOException("Invalid record type: " + fields[0]);
+                    b.setHabitat(fields[3]);
+                    newData.add(b);
                 }
 
+                else {
+                    throw new IOException(String.format("Invalid record type '%s' on line %d", fields[0], lineNumber));
+                }
             }
         }
-        return null;
+
+        catch (NumberFormatException exception) {
+            throw new IOException("Invalid format on line " + lineNumber);
+        }
+        return newData;
     }
 }
