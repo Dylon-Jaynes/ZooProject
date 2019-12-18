@@ -136,6 +136,7 @@ public class Storage {
         catch (NumberFormatException exception) {
             throw new IOException("Invalid format on line " + lineNumber);
         }
+        System.out.print(newData);
         return newData;
     }
 }
