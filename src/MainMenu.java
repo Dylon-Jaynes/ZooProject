@@ -1,6 +1,8 @@
 import menu.Menu;
 import menu.MenuItem;
 
+import java.io.File;
+import java.util.Scanner;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -10,78 +12,86 @@ import java.util.ArrayList;
 public class MainMenu extends Menu {
 
     private String userInputValue = null;
+    Scanner input = new Scanner(System.in);
 
     private static MenuItem[] menuItems = new MenuItem[] {
             new MenuItem('1', "Add an animal to the zoo"),
-            new MenuItem('2', "Remove and animal from the zoo"),
-            new MenuItem('3', "Display a list of animals in the zoo"),
-            new MenuItem('4', "Get a count of animals by species"),
+            new MenuItem('2', "Display a list of zoo animals"),
+            new MenuItem('3', ""),
+            new MenuItem('4', ""),
+
+        new MenuItem('2', "Display a list of animals in the zoo"),
+            new MenuItem('3', "Get a count of animals by species"),
+            new MenuItem('4', "Remove and animal from the zoo"),
+
             new MenuItem('X', "Exit Application")
-    };
+};
 
-    /**
-     * Constructor for the main menu
-     */
-    public MainMenu() {
+/**
+ * Constructor for the main menu
+ */
+public MainMenu() {
         super();
-    }
+        }
 
-    @Override
-    protected String getTitle() {
+@Override
+protected String getTitle() {
         return "Main Menu";
-    }
+        }
 
-    @Override
-    protected String getDescription() {
+@Override
+protected String getDescription() {
         return null;
-    }
+        }
 
-    @Override
-    protected MenuItem[] getMenuItems() {
+@Override
+protected MenuItem[] getMenuItems() {
         return menuItems;
-    }
+        }
 
-    @Override
-    protected boolean handleMenuSelection(char key) throws IOException {
+@Override
+protected boolean handleMenuSelection(char key) throws IOException {
         switch(Character.toUpperCase(key)) {
-            case '1':
-                callSubMenu();
-                break;
-            case '2':
-                displayAnimals();
-                break;
-            case '3':
-                break;
-            case '4':
-                break;
-            case 'X':
-                return false;
-            default:
-                System.out.println("Please enter a valid selection");
+        case '1':
+        callSubMenu();
+        break;
+        case '2':
+        displayAnimals();
+        break;
+        case '3':
+        break;
+        case '4':
+        break;
+        case 'X':
+        return false;
+default:
+        System.out.println("Please enter a valid selection");
         }
 
         return true;
-    }
+        }
 
-    /**
-     * Transfer program control to the Add Animal sub-menu.
-     */
-    private void callSubMenu() throws IOException {
+/**
+ * Transfer program control to the Add Animal sub-menu.
+ */
+private void callSubMenu() throws IOException {
         new SubMenu().display();
-    }
+        }
 
-    /**
-     * Use the prompt() methods built into the Menu class.
-     */
-    private void removeAnimal() {
+/**
+ * Remove and animal from the zoo database
+ */
+private void removeAnimal() {
         userInputValue = prompt("Please enter the name of the animal you wish to remove: ", true);
         System.out.println("Thank you");
-    }
+        }
 
-    /**
-     * Display the animals in the zoo database.
-     */
-    private void displayAnimals() throws IOException {
-        new Storage().loadData("zooDatabase");
-    }
-}
+/**
+ * Display the animals in the zoo database.
+ */
+private void displayAnimals() throws IOException {
+        System.out.println("\nPlease enter a filename.");
+        File fileName = new File(input.nextLine());
+        new Storage().loadData(fileName);
+        }
+        }
