@@ -11,16 +11,8 @@ import java.util.ArrayList;
  */
 public class SubMenu extends Menu {
 
-    // Make this static so it stays with the class. This way
-    // we can count how many times this SubMenu class gets
-    // instantiated.
     Scanner input = new Scanner(System.in);
     public ArrayList<Animal> zooAnimals = new ArrayList<>();
-    private static int callCount = 0;
-    private final static String[] countDescriptions = new String[] {
-            "", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth",
-            "ninth", "tenth"
-};
 
     private static MenuItem[] menuItems = new MenuItem[] {
             new MenuItem('1', "Add a Bird"),
@@ -35,19 +27,11 @@ public class SubMenu extends Menu {
      */
     public SubMenu() {
         super();
-        callCount += 1;
     }
 
     @Override
     protected String getTitle() {
         return "Add an Animal";
-    }
-
-    @Override
-    protected String getDescription() {
-        // build our description dynamically.
-        return String.format("This is the %s time you've added an animal.",
-                callCount < countDescriptions.length ? countDescriptions[callCount] : callCount + "th");
     }
 
     @Override
