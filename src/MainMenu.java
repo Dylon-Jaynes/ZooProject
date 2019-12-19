@@ -1,6 +1,8 @@
 import menu.Menu;
 import menu.MenuItem;
 
+import java.io.File;
+import java.util.Scanner;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -10,12 +12,13 @@ import java.util.ArrayList;
 public class MainMenu extends Menu {
 
     private String userInputValue = null;
+    Scanner input = new Scanner(System.in);
 
     private static MenuItem[] menuItems = new MenuItem[] {
             new MenuItem('1', "Add an animal to the zoo"),
-            new MenuItem('2', "Remove and animal from the zoo"),
-            new MenuItem('3', "Display a list of animals in the zoo"),
-            new MenuItem('4', "Get a count of animals by species"),
+            new MenuItem('2', "Display a list of zoo animals"),
+            new MenuItem('3', ""),
+            new MenuItem('4', ""),
             new MenuItem('X', "Exit Application")
     };
 
@@ -82,6 +85,8 @@ public class MainMenu extends Menu {
      * Display the animals in the zoo database.
      */
     private void displayAnimals() throws IOException {
-        new Storage().loadData("zooDatabase");
+        System.out.println("\nPlease enter a filename.");
+        File fileName = new File(input.nextLine());
+        new Storage().loadData(fileName);
     }
 }

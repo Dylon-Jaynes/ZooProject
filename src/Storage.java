@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileReader;
 
 /**
  * Gives methods to read and write data from a file
@@ -15,7 +17,7 @@ public class Storage {
      * @param data
      * @throws IOException
      */
-    public static void storeData(String fileName, ArrayList<Animal> data) throws IOException {
+    public static void storeData(File fileName, ArrayList<Animal> data) throws IOException {
         //File Format:
         //One object per line
         //Class-type, animalName, animalSex, animalHabitat (include color and flight for birds)
@@ -60,7 +62,25 @@ public class Storage {
      * @return
      * @throws IOException
      */
-    public static ArrayList<Animal> loadData(String fileName) throws IOException {
+    public static void loadData(File fileName) throws IOException {
+
+
+        try {
+            FileReader fileReader = new FileReader(fileName);
+            StringBuffer stringBuffer = new StringBuffer();
+            int numCharsRead;
+            char[] charArray = new char[1024];
+            while ((numCharsRead = fileReader.read(charArray)) > 0) {
+                stringBuffer.append(charArray, 0, numCharsRead);
+            }
+            fileReader.close();
+            System.out.println("Contents of file:");
+            System.out.println(stringBuffer.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /*
         ArrayList<Animal> newData = new ArrayList<>();
 
         //Check if file exists
@@ -136,7 +156,23 @@ public class Storage {
         catch (NumberFormatException exception) {
             throw new IOException("Invalid format on line " + lineNumber);
         }
-        System.out.print(newData);
+        int i = 0;
+        for (Animal obj: newData) {
+            if (newData.get(i).equals("Bird")) {
+                System.out.println(newData.get(i).getName());
+                System.out.println(newData.get(i).getSex());
+                System.out.println(newData.get(i).getHabitat());
+            }
+
+            else {
+                System.out.println(newData.get(i).getName());
+                System.out.println(newData.get(i).getSex());
+                System.out.println(newData.get(i).getHabitat());
+            }
+            i++;
+        }
+
         return newData;
+*/
     }
 }

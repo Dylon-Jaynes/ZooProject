@@ -1,6 +1,7 @@
 import menu.Menu;
 import menu.MenuItem;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -70,7 +71,9 @@ public class SubMenu extends Menu {
                 subMenuOption4();
                 break;
             case 'R':
-                new Storage().storeData("zooDatabase", zooAnimals);
+                System.out.println("\nPlease enter a name for a new file.");
+                File fileName = new File(input.nextLine());
+                new Storage().storeData(fileName, zooAnimals);
                 return false;
             default:
                 System.out.println("Please enter a valid selection");

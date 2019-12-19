@@ -15,7 +15,5 @@ public class ZooProject {
 
         System.out.println("Thank you for checking out our zoo!");
         Menu.delay(1500);
-
-
     }
 }
