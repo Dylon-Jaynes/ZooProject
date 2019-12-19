@@ -71,7 +71,7 @@ public class SubMenu extends Menu {
                 subMenuOption4();
                 break;
             case 'R':
-                System.out.println("\nPlease enter a name for a new file.");
+                System.out.println("Please enter a name for a new file.");
                 File fileName = new File(input.nextLine());
                 new Storage().storeData(fileName, zooAnimals);
                 return false;

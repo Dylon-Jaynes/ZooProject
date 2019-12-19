@@ -12,8 +12,5 @@ public class Bear extends Animal {
 
     public Bear(String name, String sex, String habitat) {
         super(name, sex, habitat);
-        bearCount++;
-        mammalCount++;
-        totalAnimals++;
     }
 }

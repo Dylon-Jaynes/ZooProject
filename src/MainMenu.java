@@ -4,7 +4,7 @@ import menu.MenuItem;
 import java.io.File;
 import java.util.Scanner;
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 /**
  * Our application's main menu.
@@ -17,13 +17,6 @@ public class MainMenu extends Menu {
     private static MenuItem[] menuItems = new MenuItem[] {
             new MenuItem('1', "Add an animal to the zoo"),
             new MenuItem('2', "Display a list of zoo animals"),
-            new MenuItem('3', ""),
-            new MenuItem('4', ""),
-
-        new MenuItem('2', "Display a list of animals in the zoo"),
-            new MenuItem('3', "Get a count of animals by species"),
-            new MenuItem('4', "Remove and animal from the zoo"),
-
             new MenuItem('X', "Exit Application")
 };
 
@@ -58,10 +51,6 @@ protected boolean handleMenuSelection(char key) throws IOException {
         case '2':
         displayAnimals();
         break;
-        case '3':
-        break;
-        case '4':
-        break;
         case 'X':
         return false;
 default:
@@ -79,19 +68,11 @@ private void callSubMenu() throws IOException {
         }
 
 /**
- * Remove and animal from the zoo database
- */
-private void removeAnimal() {
-        userInputValue = prompt("Please enter the name of the animal you wish to remove: ", true);
-        System.out.println("Thank you");
-        }
-
-/**
  * Display the animals in the zoo database.
  */
 private void displayAnimals() throws IOException {
-        System.out.println("\nPlease enter a filename.");
+        System.out.println("Please enter a filename.\n");
         File fileName = new File(input.nextLine());
         new Storage().loadData(fileName);
         }
-        }
+}

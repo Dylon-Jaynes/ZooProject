@@ -23,8 +23,6 @@ public class Bird extends Animal {
         super(name, sex, habitat);
         color = colorValue;
         flight = flightValue;
-        birdCount++;
-        totalAnimals++;
     }
 
     /**
